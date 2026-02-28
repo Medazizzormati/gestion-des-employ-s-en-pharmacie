@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: pharmacy-hr-backend
+    env: python
+    buildCommand: pip install -r requirements.txt && python manage.py migrate
+    startCommand: gunicorn config.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: "True"
+      - key: DB_PATH
+        value: /opt/render/project/src/backend/data/db.sqlite3
+    disk:
+      name: sqlite-db
+      mountPath: /opt/render/project/src/backend/data
+      sizeGB: 1
