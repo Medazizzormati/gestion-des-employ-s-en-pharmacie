@@ -1,0 +1,150 @@
+{
+  "rules": [
+    {
+      "code": "ART_L3121_27",
+      "name": "Durée légale hebdomadaire",
+      "category": "working_time",
+      "threshold": 35,
+      "unit": "hours",
+      "legal_reference": "Article L3121-27 Code du Travail",
+      "description": "La durée légale du travail est fixée à 35 heures par semaine",
+      "violation_examples": [
+        "Planifier 40h par semaine régulièrement",
+        "Ne pas compenser les heures supplémentaires"
+      ],
+      "correct_examples": [
+        "Planifier 35h par semaine",
+        "Respecter les heures légales"
+      ],
+      "penalty": "Heures supplémentaires doivent être compensées"
+    },
+    {
+      "code": "ART_L3121_20",
+      "name": "Durée maximale absolue",
+      "category": "working_time",
+      "threshold": 48,
+      "unit": "hours",
+      "legal_reference": "Article L3121-20 Code du Travail",
+      "description": "La durée du travail ne peut pas dépasser 48 heures par semaine",
+      "violation_examples": [
+        "Planifier 50h de travail en une semaine"
+      ],
+      "correct_examples": [
+        "Respecter le maximum de 48h par semaine"
+      ],
+      "penalty": "Nullité du contrat pour cette semaine"
+    },
+    {
+      "code": "ART_L3121_31",
+      "name": "Repos quotidien",
+      "category": "rest",
+      "threshold": 11,
+      "unit": "hours",
+      "legal_reference": "Article L3121-31 Code du Travail",
+      "description": "Chaque salarié a droit à un repos quotidien d'au moins 11 heures consécutives",
+      "violation_examples": [
+        "Planifier le travail de 8h à 19h puis 8h à 17h le lendemain"
+      ],
+      "correct_examples": [
+        "Assurer 11h entre deux jours de travail"
+      ],
+      "penalty": "Majoration de salaire + amende SNCF"
+    },
+    {
+      "code": "ART_L3132_2",
+      "name": "Repos hebdomadaire",
+      "category": "rest",
+      "threshold": 1,
+      "unit": "days",
+      "legal_reference": "Article L3132-2 Code du Travail",
+      "description": "Au moins un jour de repos par semaine (généralement le dimanche)",
+      "violation_examples": [
+        "Travailler 7 jours consécutifs"
+      ],
+      "correct_examples": [
+        "Assurer au minimum un jour de repos par semaine"
+      ],
+      "penalty": "Amende + obligation de repos compensateur"
+    },
+    {
+      "code": "ART_L3121_16",
+      "name": "Pause après 6 heures",
+      "category": "breaks",
+      "threshold": 6,
+      "unit": "hours",
+      "legal_reference": "Article L3121-16 Code du Travail",
+      "description": "Une pause doit être accordée après 6 heures de travail consécutif",
+      "violation_examples": [
+        "Planifier 8h de travail sans pause"
+      ],
+      "correct_examples": [
+        "Ajouter une pause de 20-30 min après 6h de travail"
+      ],
+      "penalty": "Amende + compensation"
+    },
+    {
+      "code": "ART_L3122_7",
+      "name": "Durée maximale quotidienne",
+      "category": "daily_max",
+      "threshold": 10,
+      "unit": "hours",
+      "legal_reference": "Article L3122-7 Code du Travail",
+      "description": "La durée journalière de travail ne peut dépasser 10 heures",
+      "violation_examples": [
+        "Planifier une journée de 12h"
+      ],
+      "correct_examples": [
+        "Limiter à 10h maximum par jour"
+      ],
+      "penalty": "Dépassement illégal, compensation requise"
+    },
+    {
+      "code": "ART_L3131_5",
+      "name": "Nuit (22h-6h) - Durée max 8h",
+      "category": "night_shift",
+      "threshold": 8,
+      "unit": "hours",
+      "legal_reference": "Article L3131-5 Code du Travail",
+      "description": "Une période de nuit ne peut dépasser 8 heures consécutives",
+      "violation_examples": [
+        "Planifier 10h de travail de nuit"
+      ],
+      "correct_examples": [
+        "Limiter les nuits à 8h maximum"
+      ],
+      "penalty": "Majoration de 15-30% + compensation"
+    },
+    {
+      "code": "ART_L5125_4",
+      "name": "Présence obligatoire pharmacien",
+      "category": "pharmacist_presence",
+      "threshold": 1,
+      "unit": "person",
+      "legal_reference": "Article L5125-4 Code de la Santé",
+      "description": "Un pharmacien doit être présent à tout moment d'ouverture",
+      "violation_examples": [
+        "Ouvrir sans pharmacien"
+      ],
+      "correct_examples": [
+        "Toujours avoir un pharmacien sur place"
+      ],
+      "penalty": "Fermeture administrative + amende"
+    },
+    {
+      "code": "ART_L3141_3",
+      "name": "Congés payés (25 jours)",
+      "category": "vacation",
+      "threshold": 25,
+      "unit": "days",
+      "legal_reference": "Article L3141-3 Code du Travail",
+      "description": "Chaque salarié a droit à 25 jours de congés payés par an",
+      "violation_examples": [
+        "Refuser 25 jours de congé"
+      ],
+      "correct_examples": [
+        "Accorder 25 jours minimum de vacances payées"
+      ],
+      "penalty": "Amende SNCF, mise en cause pénale"
+    }
+  ]
+}
