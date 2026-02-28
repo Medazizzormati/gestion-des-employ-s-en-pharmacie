@@ -341,6 +341,14 @@ class SeedDemoDataView(APIView):
     
     def post(self, request):
         """Create demo employees, shifts, and absences"""
+        return self.seed(request)
+        
+    def get(self, request):
+        """Allow seeding via GET for manual initialization"""
+        return self.seed(request)
+
+    def seed(self, request):
+        """Main seeding logic"""
         from django.contrib.auth.models import User
         from hr_agent.models import Employee, WorkShift, ComplianceRule
         from hr_agent.services import ComplianceChecker
