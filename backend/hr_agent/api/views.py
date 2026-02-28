@@ -376,7 +376,7 @@ class SeedDemoDataView(APIView):
             
         for emp_data in demo_employees:
             user, _ = User.objects.get_or_create(
-                username=f"{emp_data['first_name'].lower()}.{emp_data['last_name'].lower()}",
+                username=f"{emp_data['first_name'].lower().replace(' ', '')}.{emp_data['last_name'].lower().replace(' ', '')}",
                 defaults={
                     'first_name': emp_data['first_name'],
                     'last_name': emp_data['last_name'],
