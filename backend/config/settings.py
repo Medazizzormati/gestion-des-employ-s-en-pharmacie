@@ -110,6 +110,10 @@ REST_FRAMEWORK = {
     ],
 }
 
+# Post-login redirection to avoid 404
+LOGIN_REDIRECT_URL = '/api/'
+LOGOUT_REDIRECT_URL = '/'
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
