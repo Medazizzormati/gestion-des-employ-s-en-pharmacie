@@ -348,11 +348,11 @@ class SeedDemoDataView(APIView):
         
         # Create demo users and employees
         demo_employees = [
-            {"first_name": "Marie", "last_name": "Dupont", "role": "pharmacist_titular", "is_qualified": True},
-            {"first_name": "Jean", "last_name": "Martin", "role": "pharmacist_adjoint", "is_qualified": True},
-            {"first_name": "Sophie", "last_name": "Bernard", "role": "preparateur", "is_qualified": False},
-            {"first_name": "Pierre", "last_name": "Lefevre", "role": "preparateur", "is_qualified": False},
-            {"first_name": "Luc", "last_name": "Moreau", "role": "clerk", "is_qualified": False},
+            {"first_name": "Mohamed Aziz", "last_name": "Zormati", "role": "pharmacist_titular", "is_qualified": True},
+            {"first_name": "Haythem", "last_name": "Mighri", "role": "pharmacist_adjoint", "is_qualified": True},
+            {"first_name": "Badis", "last_name": "Abid", "role": "preparateur", "is_qualified": False},
+            {"first_name": "Erij", "last_name": "AI", "role": "preparateur", "is_qualified": False},
+            {"first_name": "Leila", "last_name": "HR", "role": "clerk", "is_qualified": False},
         ]
         
         created_employees = []
