@@ -357,6 +357,15 @@ class SeedDemoDataView(APIView):
         
         created_employees = []
         
+        # Create admin superuser if not exists
+        if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser('admin', 'admin@pharmacy.local', 'password123')
+            print("Created admin superuser")
+        else:
+            admin_user = User.objects.get(username='admin')
+            admin_user.set_password('password123')
+            admin_user.save()
+            
         for emp_data in demo_employees:
             user, _ = User.objects.get_or_create(
                 username=f"{emp_data['first_name'].lower()}.{emp_data['last_name'].lower()}",
