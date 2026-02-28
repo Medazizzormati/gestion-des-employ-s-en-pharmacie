@@ -15,9 +15,3 @@ services:
         value: "*"
       - key: CORS_ALLOW_ALL_ORIGINS
         value: "True"
-      - key: DB_PATH
-        value: /opt/render/project/src/backend/data/db.sqlite3
-    disk:
-      name: sqlite-db
-      mountPath: /opt/render/project/src/backend/data
-      sizeGB: 1
