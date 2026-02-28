@@ -1,7 +1,7 @@
 // API client for HR Agent backend with TanStack Query support
 // Configured for localhost during development, adjust API_URL for production
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://gestion-des-employ-s-en-pharmacie.onrender.com/api';
 
 interface RequestOptions extends RequestInit {
   params?: Record<string, string | number | boolean>;
